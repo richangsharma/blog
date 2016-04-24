@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','PostController@index');
+
+Route::get('new','PostController@newPost');
+
+Route::post('createpost','PostController@createPost');
+
+Route::get('view/{id}','PostController@viewpost');
+
+Route::post('createComment','PostController@createComment');
